@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body ng-app="monApp">
+
+ <input type="text" ng-init="obj = {titre: 'une valeur'}" ng-model="obj.titre">
+
+<div ng-controller="monController">
+	{{ name }}
+	<ng-include src="'views/tpl.html'"></ng-include>
+	<div ng-controller="testController">
+		{{ name }}
+	</div>
+</div>
+
+
+ <script src="bower_components/angular/angular.js"></script>
+ <script>
+  // Le contrôleûr permet de séparer la logique de l'affichage
+  var app = angular.module('monApp', []);
+
+  app.controller('monController', function ($scope) {
+  	$scope.name = 'TOTO';
+  	$scope.obj.titre = "UN TEST !!!!!"
+  });
+
+  app.controller('testController', function ($scope) {
+  	// $scope.name = 'Wilfrid';
+  })
+ </script>
+
+</body>
+</html>

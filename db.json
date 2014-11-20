@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "toto",
+      "age": 30
+    },
+    {
+      "id": 2,
+      "username": "Joe",
+      "age": 27
+    }
+  ],
+  "js": [],
+  "favicon.ico": [],
+  "tpl.html": [],
+  "app": []
+}

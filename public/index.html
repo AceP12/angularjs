@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS</title>
+  <link rel="stylesheet" type="style/css" href="css/style.css"></link>
+</head>
+<body ng-app="monApp">
+
+  <ng-include src="'views/nav.html'"></ng-include>
+
+	<ng-view></ng-view>
+
+ <script src="bower_components/angular/angular.js"></script>
+ <script src="app/app.js"></script>
+ <script src="app/controllers.js"></script>
+ <script src="bower_components/angular-route/angular-route.js"></script>
+</body>
+</html>

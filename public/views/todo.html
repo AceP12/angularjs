@@ -1,0 +1,17 @@
+<!--public/views/todo.html-->
+
+<h1>Todo List</h1>
+
+<div class="todo">
+<input type ="text" ng-model="todo"><button ng-click="addTodo()">+</button>
+
+	<!--ng-checked-->
+
+	<ul>
+		<li ng-class="{done: t.done}" ng-repeat="t in todos" >
+			<input type="checkbox" ng-click="status(t)">{{ t.text }}
+		</li>
+	</ul>
+
+
+</div>

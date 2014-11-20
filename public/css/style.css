@@ -1,0 +1,25 @@
+  .done {
+
+    text-decoration: line-through;
+    color: #999;
+  }
+  nav ul li {
+
+    list-style: none;
+  }
+
+  .todo {
+
+  	background: lightblue;
+  	padding: 10px;
+  	width: 200px;
+
+  }
+
+  .todo ul {
+
+  	margin: 0px;
+  	padding: 0px;
+  	list-style-type: none;
+  }
+

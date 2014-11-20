@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS</title>
+  <style type="text/css">
+
+  .done {
+    text-decoration: line-through;
+    color: #999;
+  }
+  nav ul {
+    list-style: none;
+  }
+
+  </style>
+</head>
+<body ng-app="monApp">
+
+  <ng-include src="'views/nav.html'"></ng-include>
+
+	<ng-view></ng-view>
+
+<div ng-controller="monController">
+	{{ name }}
+
+  <h1 ng-click="show=!show">News</h1>
+  <p ng-hide="show">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div ng-controller="childController">
+    <h2>Je suis le childController</h2>
+  </div>
+
+</div>
+
+
+<div ng-controller="testController">
+
+  <!-- surveillance de données -->
+  <input type="text" ng-model="surveillance"> {{ surveillance }}
+  <br>
+
+  <span ng-click="myFonction()">Je vais déclencher une action</span>
+
+  <br>
+  {{ name }}
+  <ul>
+    <li ng-class="{done: todo.done}" ng-repeat="todo in todos">{{ todo.todo | uppercase }}</li>
+  </ul>
+</div>
+
+ <script src="bower_components/angular/angular.js"></script>
+ <script src="app/app.js"></script>
+ <script src="app/controllers.js"></script>
+ <script src="bower_components/angular-route/angular-route.js"></script>
+</body>
+</html>
